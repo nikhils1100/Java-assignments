@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping()
 public class Controller {
-    @Autowired
-    private Calculator calc;
+
+    private Calculator calc = new Calculator();
 
     @GetMapping("/add/{a}/{b}")
     public int addNumbers(@PathVariable int a, @PathVariable int b) {
